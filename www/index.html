@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Assets/css/all.min.css">
+    <link rel="stylesheet" href="/Assets/css/styles.css">
+
+    <title>ABM - CRUD</title>
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="text-center">ABM</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <button type="button" data-toggle="modal" data-type="create" data-target="#modal"
+                class="btn btn-danger btn-custom">
+            <i class="fas fa-2x fa-plus"></i>
+        </button>
+    </div>
+
+    <div class="users row">
+        <div class="col-md-10 offset-md-1 col-sm-12">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                <tr class="d-flex">
+                    <th class="col-1 text-center" scope="col">#</th>
+                    <th class="col-4 text-center" scope="col">Name</th>
+                    <th class="col-1 text-center" scope="col">Age</th>
+                    <th class="col-3 text-center" scope="col">Update</th>
+                    <th class="col-3 text-center" scope="col">Delete</th>
+                </tr>
+                </thead>
+                <tbody id="table_body">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-row align-items-center">
+                    <div id="name-parent" class="col-sm-7 offset-sm-1 my-1">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name"
+                               required>
+                        <div class="invalid-feedback">Name cannot be empty</div>
+                    </div>
+                    <div id="age-parent" class="col-sm-3 my-1">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control" id="age"
+                               placeholder="Age" required>
+                        <input type="hidden" id="id">
+                        <div class="invalid-feedback">Age cannot be empty</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" onclick="App.onSave(this)" id="save" class="btn btn-success">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/Assets/js/jquery.min.js"></script>
+<script src="/Assets/js/popper.min.js"></script>
+<script src="/Assets/js/bootstrap.min.js"></script>
+<script src="/Assets/js/script.js"></script>
+</body>
+</html>

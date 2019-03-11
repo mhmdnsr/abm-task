@@ -1,0 +1,23 @@
+.btn-custom{
+    background-color: transparent;
+    color: #1b1e21;
+    border-color: #1b1e21;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-danger:not(:disabled):not(.disabled):active{
+    background-color: #1b1e21;
+    color: #ffffff;
+    border-color: #1b1e21;
+    outline: none;
+    box-shadow: none!important;
+}
+
+.users{
+    margin-top: 50px;
+}
+
+.loader{
+    margin: 10px;
+}
